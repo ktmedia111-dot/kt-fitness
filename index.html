@@ -64,8 +64,9 @@
 </section>
 <section id="history" class="page">
  <div class="sectiontitle"><div><div class="eyebrow">GEÇMİŞ KAYITLAR</div><h2>Takvim & Geçmiş</h2><p>Günlük öğün, antrenman, kardiyo, su ve supplement kayıtların bu cihazda saklanır.</p></div></div>
- <div class="panel"><label>Gün seç<input type="date" id="historyDate"></label><div id="historyContent"></div></div>
- <div class="panel"><button class="smallbtn" id="exportData">Verilerimi JSON olarak yedekle</button><label class="filebtn">Yedekten geri yükle<input type="file" id="importData" accept="application/json"></label></div>
+ <div class="panel"><h3>Günlük kayıtlarım</h3><p class="muted">Kaydedilmiş günleri buradan seçip tek tek inceleyebilirsin.</p><label>Gün seç<input type="date" id="historyDate"></label><div id="historyContent"></div><div id="dailyRecords" class="recordlist"></div></div>
+ <div class="panel"><h3>Haftalık rapor</h3><p class="muted">Bir tarih seç; o haftanın beslenme, antrenman, kardiyo, su ve supplement özetini PNG olarak indir.</p><label>Raporlanacak haftadan bir gün seç<input type="date" id="weekDate"></label><div id="weekSummary"></div><button class="primary" id="exportWeekPng">Haftalık raporu PNG indir</button></div>
+ <div class="panel"><button class="smallbtn" id="exportData">Tüm verilerimi JSON olarak yedekle</button><label class="filebtn">Yedekten geri yükle<input type="file" id="importData" accept="application/json"></label></div>
 </section>
 <section id="settings" class="page">
  <div class="sectiontitle"><div><div class="eyebrow">UYGULAMA AYARLARI</div><h2>Ayarlar</h2><p>Hedef ve hatırlatmaları yönet.</p></div></div>
