@@ -1,20 +1,26 @@
-KT FITNESS — PERSONAL EDITION
+KT FITNESS – ÖĞÜN TAKİPLİ GÜNCEL SÜRÜM
 
-Bu sürüm ücretsiz, sunucusuz ve cihaz içi kayıt mantığıyla hazırlanmıştır.
-Veriler tarayıcının localStorage alanında saklanır. Tarayıcı verilerini temizlemek
-veya uygulamayı farklı tarayıcıda açmak kayıtları etkileyebilir. Ayarlar > Yedeği indir
-ile düzenli JSON yedeği alın; yeni cihazda Yedek yükle ile geri yükleyin.
+DOSYALAR
+index.html, style.css, app.js, manifest.json, sw.js
 
-TELEFONA KURULUM
-1) Klasörü HTTPS destekleyen bir statik web barındırma alanına yükleyin.
-   Ücretsiz seçenekler: GitHub Pages veya Netlify'ın ücretsiz statik site katmanı.
-2) Siteyi telefonunuzda Chrome/Safari ile açın.
-3) Android: tarayıcı menüsü > Uygulamayı yükle / Ana ekrana ekle.
-   iPhone: Paylaş > Ana Ekrana Ekle.
-4) İlk açılıştan sonra temel ekranlar çevrimdışı kullanılabilir.
+GÜNCEL ÖZELLİKLER
+- Siyah/gri/turuncu mobil uyumlu arayüz
+- Haftalık ağırlık antrenmanı planı ve egzersiz başına kilo kaydı
+- Antrenman, kardiyo, karın ve günlük makro hedefi tamamlandı işaretleri
+- Su takibi ve kişisel su hedefi
+- Günlük öğün planı: sabah, öğle, ara öğün ve akşam; saat, yiyecek açıklaması ve günlük tamamlandı tikleri
+- Tarihe göre son 7 günlük öğün takip geçmişi
+- Su/öğün/antrenman bildirim denemeleri (uygulama açıkken)
+- Cihaz içi kural tabanlı gelişim değerlendirmesi
+- Kilo/çevre ölçümleri ve fotoğraflar
+- JSON yedekleme ve geri yükleme
+- Çevrimdışı PWA önbelleği
 
-ÖNEMLİ
-- Kaynak dosyalar uygulamanın kendisidir; henüz herhangi bir hesaba/siteye dağıtılmadı.
-- Fotoğraflar cihaz depolamasında tutulur. Her fotoğraf için 3 MB sınırı vardır.
-- Fotoğraflar JSON yedeğine dahil edilmediğinden fotoğrafları ayrıca saklayın.
-- Uygulama sağlık hizmeti veya tıbbi öneri yerine geçmez.
+GÜNCELLEME
+GitHub deposundaki aynı isimli dosyaları bu ZIP içindekilerle değiştirin. Dosyaları ZIP olarak değil, ZIP'ten çıkarıp tek tek depo kök dizinine yükleyin. Commit edin. GitHub Pages aynı adres üzerinden güncellenecektir.
+
+ÖNEMLİ SINIRLAMALAR
+- Veriler tarayıcının yerel depolamasında saklanır; GitHub'a yüklenmez. Tarayıcı verileri silinirse kayıtlar kaybolabilir. Düzenli JSON yedeği alın.
+- Fotoğraflar JSON yedeğine dahil değildir; fotoğrafları ayrıca saklayın.
+- iPhone web uygulamalarında arka planda kesin saatli yerel bildirim garantisi yoktur. Bu sürüm hatırlatmaları uygulama açıkken kontrol eder. Güvenilir arka plan bildirimleri için ayrıca sunucu/push altyapısı gerekir.
+- “Akıllı değerlendirme” bu sürümde çevrimdışı, kural tabanlı özet üretir; gerçek üretken yapay zekâ değildir. Gerçek AI entegrasyonu için güvenli bir sunucu/API ve olası kullanım maliyeti gerekir.
