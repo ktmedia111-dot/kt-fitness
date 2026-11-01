@@ -1,0 +1,10 @@
+{
+  "name": "KT FITNESS",
+  "short_name": "KT FITNESS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090d0b",
+  "theme_color": "#0b100d",
+  "description": "Kişisel antrenman ve beslenme takip uygulaması",
+  "icons": []
+}

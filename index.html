@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b100d"><meta name="description" content="KT FITNESS kişisel antrenman ve beslenme takip uygulaması">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>KT FITNESS</title>
+</head>
+<body>
+<header class="top">
+  <div><div class="eyebrow">PERSONAL TRANSFORMATION</div><h1>KT <span>FITNESS</span></h1></div>
+  <button id="installBtn" class="small hidden">YÜKLE</button>
+</header>
+<nav class="tabs" id="tabs">
+<button class="active" data-page="home">Özet</button><button data-page="workout">Antrenman</button><button data-page="nutrition">Beslenme</button><button data-page="progress">Gelişim</button><button data-page="settings">Ayarlar</button>
+</nav>
+<main>
+<section id="home" class="page active">
+  <div class="hero"><div><div class="eyebrow">12 HAFTALIK DÖNÜŞÜM</div><h2>Bugün hedeflerine<br>bir adım daha yaklaş.</h2><p>İstikrar, sonuç getirir.</p></div><div class="ring" id="completionRing"><b id="completion">0%</b><small>TAMAMLANDI</small></div></div>
+  <div class="grid stats">
+    <article class="panel"><label>GÜNCEL KİLO</label><strong id="dashWeight">97.8 <small>kg</small></strong><span id="weightChange" class="muted">İlk kayıt</span></article>
+    <article class="panel"><label>GÜNLÜK KALORİ</label><strong id="dashCalories">0 <small>kcal</small></strong><span class="muted">/ 2800 kcal</span></article>
+    <article class="panel"><label>PROTEİN</label><strong id="dashProtein">0 <small>g</small></strong><span class="muted">/ 210 g</span></article>
+    <article class="panel"><label>SU</label><strong id="dashWater">0 <small>ml</small></strong><span class="muted">/ 3000 ml</span></article>
+  </div>
+  <div class="panel"><div class="section-head"><h3>Günlük görevler</h3><span class="muted" id="todayDate"></span></div>
+    <div id="dailyTasks" class="tasks"></div>
+  </div>
+  <div class="panel"><div class="section-head"><h3>12 haftalık yol haritası</h3><span class="tag">12 HAFTA</span></div><div class="weekbar" id="weekbar"></div><div class="muted" id="weekLabel">Başlangıç haftası</div></div>
+  <div class="panel"><h3>Hızlı kayıt</h3><div class="quick"><button data-go="nutrition">＋ Öğün ekle</button><button data-go="progress">＋ Kilo kaydet</button><button data-go="workout">＋ Antrenman</button></div></div>
+</section>
+<section id="workout" class="page">
+  <div class="page-title"><div class="eyebrow">TRAINING LOG</div><h2>Antrenman</h2><p>5 gün ağırlık · 4 gün kardiyo · 3 gün karın</p></div>
+  <div class="panel"><div class="section-head"><h3>Haftalık program</h3><span class="tag">5 GÜN</span></div><div id="workoutDays" class="daylist"></div></div>
+  <div class="panel"><h3>Seçili gün</h3><div id="selectedWorkout"></div></div>
+  <div class="panel"><h3>Kardiyo & karın</h3><div class="split2"><div><label>KARDİYO</label><p>Haftada 4 gün · 20–30 dk</p><button id="cardioDone">Bugün kardiyo yaptım</button></div><div><label>KARIN</label><p>Haftada 3 gün</p><button id="absDone">Bugün karın çalıştım</button></div></div></div>
+</section>
+<section id="nutrition" class="page">
+ <div class="page-title"><div class="eyebrow">NUTRITION TRACKER</div><h2>Beslenme</h2><p>Günlük hedeflerini takip et.</p></div>
+ <div class="grid stats">
+  <article class="panel"><label>KALORİ</label><strong id="nCal">0</strong><div class="meter"><i id="calMeter"></i></div><span class="muted">2800 kcal hedef</span></article>
+  <article class="panel"><label>PROTEİN</label><strong id="nPro">0 g</strong><div class="meter"><i id="proMeter"></i></div><span class="muted">210 g hedef</span></article>
+  <article class="panel"><label>KARBONHİDRAT</label><strong id="nCarb">0 g</strong><div class="meter"><i id="carbMeter"></i></div><span class="muted">310 g hedef</span></article>
+  <article class="panel"><label>YAĞ</label><strong id="nFat">0 g</strong><div class="meter"><i id="fatMeter"></i></div><span class="muted">80 g hedef</span></article>
+ </div>
+ <div class="panel"><div class="section-head"><h3>Öğün ekle</h3><span class="muted">Gram / porsiyon</span></div>
+ <form id="mealForm" class="formgrid"><input id="foodName" placeholder="Besin adı" required><select id="mealType"><option>Kahvaltı</option><option>Öğle</option><option>Ara öğün</option><option>Antrenman öncesi</option><option>Akşam</option></select><input id="foodAmount" type="number" min="0" step="1" placeholder="Miktar (g)" required><input id="foodCal" type="number" min="0" placeholder="Kalori" required><input id="foodPro" type="number" min="0" step=".1" placeholder="Protein (g)" required><input id="foodCarb" type="number" min="0" step=".1" placeholder="Karbonhidrat (g)" required><input id="foodFat" type="number" min="0" step=".1" placeholder="Yağ (g)" required><button class="primary" type="submit">Öğünü kaydet</button></form></div>
+ <div class="panel"><div class="section-head"><h3>Bugünkü öğünler</h3><button class="textbtn" id="clearMeals">Günü temizle</button></div><div id="mealList" class="meal-list"></div></div>
+ <div class="panel"><h3>Su takibi</h3><div class="waterline"><strong id="waterCount">0 ml</strong><div><button id="waterAdd">+250 ml</button><button id="waterReset" class="ghost">Sıfırla</button></div></div></div>
+</section>
+<section id="progress" class="page">
+ <div class="page-title"><div class="eyebrow">BODY METRICS</div><h2>Gelişim takibi</h2><p>Kilonu ve ölçülerini düzenli kaydet.</p></div>
+ <div class="panel"><h3>Ölçüm kaydı</h3><form id="measureForm" class="formgrid"><input id="weight" type="number" step=".1" placeholder="Kilo (kg)"><input id="waist" type="number" step=".1" placeholder="Bel (cm)"><input id="chest" type="number" step=".1" placeholder="Göğüs (cm)"><input id="arm" type="number" step=".1" placeholder="Kol (cm)"><input id="thigh" type="number" step=".1" placeholder="Bacak (cm)"><button class="primary">Ölçümü kaydet</button></form></div>
+ <div class="panel"><div class="section-head"><h3>Kilo geçmişi</h3><span class="muted">Son kayıtlar</span></div><div id="weightChart" class="chart"></div><div id="measureList" class="history"></div></div>
+ <div class="panel"><h3>Gelişim fotoğrafları</h3><p class="muted">Fotoğraflar yalnızca bu cihazda saklanır. Çok sayıda/büyük fotoğraf cihaz depolamasını doldurabilir.</p><label class="upload">＋ Fotoğraf seç<input id="photoInput" type="file" accept="image/*" multiple hidden></label><div id="photoGrid" class="photos"></div></div>
+</section>
+<section id="settings" class="page">
+ <div class="page-title"><div class="eyebrow">PERSONAL SETTINGS</div><h2>Ayarlar & yedekleme</h2></div>
+ <div class="panel"><h3>Başlangıç bilgileri</h3><form id="profileForm" class="formgrid"><input id="profileWeight" type="number" step=".1" placeholder="Başlangıç kilosu (kg)"><input id="profileHeight" type="number" placeholder="Boy (cm)"><input id="calGoal" type="number" placeholder="Kalori hedefi"><input id="proGoal" type="number" placeholder="Protein hedefi (g)"><input id="carbGoal" type="number" placeholder="Karbonhidrat hedefi (g)"><input id="fatGoal" type="number" placeholder="Yağ hedefi (g)"><button class="primary">Hedefleri kaydet</button></form></div>
+ <div class="panel"><h3>Veri güvenliği</h3><p class="muted">Kayıtlar bu tarayıcıda/telefonda tutulur. Tarayıcı verilerini temizlersen kaybolabilir. Düzenli yedek al.</p><div class="quick"><button id="exportBtn">Yedeği indir</button><label class="upload">Yedek yükle<input id="importFile" type="file" accept="application/json" hidden></label></div><button id="resetAll" class="danger">Tüm verileri sil</button></div>
+ <div class="panel"><h3>Uygulama hakkında</h3><p>KT FITNESS · Personal Edition · Offline-first</p><p class="muted">Kişisel takip aracıdır; kalori ve antrenman hedefleri gerektiğinde uzman desteğiyle uyarlanmalıdır.</p></div>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
